@@ -12,7 +12,7 @@ Bootstrap(app)
 
 @app.route('/')
 def student():
-    return render_template('student.html')
+    return render_template('vaccineTracker.html')
 
 
 @app.route('/result', methods=["GET", "POST"])
