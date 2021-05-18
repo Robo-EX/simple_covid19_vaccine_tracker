@@ -1,0 +1,67 @@
+{% extends "bootstrap/base.html" %} {% block title %}Vaccine Tracker{% endblock
+%} {% block navbar %}
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button
+        type="button"
+        class="navbar-toggle collapsed"
+        data-toggle="collapse"
+        data-target="#navbar"
+        aria-expanded="false"
+        aria-controls="navbar"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand">Covid Vaccine Tracker</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a>Home</a></li>
+      </ul>
+      <p class="navbar-text navbar-right">Made By: Bhavik Panchal</p>
+    </div>
+    <!--/.nav-collapse -->
+  </div>
+</nav>
+
+{% endblock %} {% block content %}
+<div
+  class="container"
+  style="
+    background-image: url('https://images.theconversation.com/files/341551/original/file-20200612-153812-ws3rqu.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=600&h=317&fit=crop&dpr=1');
+    background-repeat: no-repeat;
+    background-size: cover;
+  "
+>
+  <br /><br /><br />
+
+  <div class="center-block">
+    <h1>Welcome,</h1>
+    <p class="lead text-center">
+      Use this site to find the avaibility of slots at Covid Vaccination Center.
+    </p>
+  </div>
+  <form
+    action="http://127.0.0.1:5000/result"
+    method="POST"
+    class="navbar-form navbar-left"
+    role="search"
+  >
+    <div class="form-group">
+      <input
+        type="text"
+        id="pincode"
+        name="pincode"
+        class="form-control"
+        placeholder="Enter Pincode"
+      />
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
+  <p class="text-center">get planned vaccination sessions for 7 days</p>
+</div>
+{% endblock %}
